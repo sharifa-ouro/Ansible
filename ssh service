@@ -1,0 +1,12 @@
+[devopscode@ip-172-31-52-192 root]$ exit
+exit
+[root@ip-172-31-52-192 ~]# passwd devopscode
+Changing password for user devopscode.
+New password: 
+BAD PASSWORD: The password fails the dictionary check - it is based on a dictionary word
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+[root@ip-172-31-52-192 ~]# vim /etc/ssh/sshd_config
+[root@ip-172-31-52-192 ~]# service sshd restart
+Redirecting to /bin/systemctl restart sshd.service
+[root@ip-172-31-52-192 ~]# 
