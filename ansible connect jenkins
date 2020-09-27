@@ -1,0 +1,11 @@
+[root@ip-172-31-52-192 ansible]# useradd devopscode
+[root@ip-172-31-52-192 ansible]# vim hosts
+[root@ip-172-31-52-192 ansible]# vim ansible.cfg
+add a line after default
+host_key_checking = False
+[root@ip-172-31-52-192 ansible]# cd ~
+[root@ip-172-31-52-192 ~]# su devopscode
+[devopscode@ip-172-31-52-192 root]$ ansible -i /etc/ansible/hosts webserver -m ping
+server3 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_in
